@@ -77,14 +77,14 @@ def hierarchical_cluster(distance_matrix, type_of_clustering='single'):
 
 
 def main():
-    # data = get_data(10)
-    # data = normalize(data)
+    data = get_data(50)
+    data = normalize(data)
 
-    data = np.array([[1.5, 2.0],
-                     [3.0, 1.0],
-                     [3.5, 2.5],
-                     [1.0, 0.5],
-                     [2.5, 2.0]])
+    # data = np.array([[1.5, 2.0],
+    #                  [3.0, 1.0],
+    #                  [3.5, 2.5],
+    #                  [1.0, 0.5],
+    #                  [2.5, 2.0]])
 
     distance_matrix = create_distance_matrix(data)
     clusters = hierarchical_cluster(distance_matrix, 'complete')
