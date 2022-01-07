@@ -124,6 +124,7 @@ def main():
     #                  [1.0, 0.5],
     #                  [2.5, 2.0]])
     distance_matrix = create_distance_matrix(data)
+    eps = np.quantile(distance_matrix, 0.05)
     labels = add_labels(distance_matrix, eps, minPts)
     clusters = create_clusters(labels, distance_matrix, eps)
     plot_clusters(data, clusters)
